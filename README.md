@@ -21,8 +21,8 @@ Made on 2026-11-14 from rev b91 of the compendium page (commit `6cf22d4` of chro
 
 ## Checks and limits
 
-- A scripted headless-Chromium test loaded the page, moved every slider, select and checkbox, clicked every button and sent pointer, wheel and key events to every canvas: 114 actions (slider moves, clicks, and pointer, wheel and key events), 1 canvas, no uncaught exception and no console error. It is a smoke test: this extract was not compared with the original module for identical behaviour, and nothing here has had an independent review.
-- This module is cut loose from three others: the "gamma_D to mesh" button still computes the velocity and shows its confirmation, but there is no wave mesh (Module II) or frame animation (Module I) to receive it, so nothing visible follows.
+- A scripted headless-Chromium test loaded the page, moved every slider and select, clicked every button, sent pointer and wheel events to every canvas and sent key events to the document: 114 actions (the count includes 38 fixed key and window events), 1 canvas, no uncaught exception and no console error. The page has no selects. It is a smoke test: this extract was not compared with the original module for identical behaviour, and nothing here has had an independent review.
+- This module is cut loose from three others: the "γ_D → mesh" button still computes the velocity and shows its confirmation, but there is no wave mesh (Module II) or frame animation (Module I) to receive it, so nothing visible follows.
 - The collapse to a note and the "Walk leg" button, which walks the harmonic leg of Module XV, work on the lattice side only: no leg moves and no rung sounds (read from the code).
 - The lattice's own scale selection, collapse and register behaviour does not depend on those modules and is unchanged (read from the code).
 - The framework is the author's own and still in progress; Module XVII of the compendium (also a repository of its own, [chronowave-verdicts-and-rulings](https://github.com/Ajuntanaga/chronowave-verdicts-and-rulings)) carries the page's own verdicts and open rulings.
